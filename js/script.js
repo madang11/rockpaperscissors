@@ -8,4 +8,11 @@
 
 
 // DOCUMENT READY FUNCTION BELOW
+$("#shoot").click(function(){
+    let input = $("#input").val();
+    let cpResult = "rock";
+    $("#userChoice").append(input)
+    $("#computerChoice").append(cpResult)
+
+});
 
