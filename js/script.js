@@ -10,9 +10,32 @@
 // DOCUMENT READY FUNCTION BELOW
 $("#shoot").click(function(){
     let input = $("#input").val();
-    let cpResult = "rock";
-    $("#userChoice").append(input)
-    $("#computerChoice").append(cpResult)
+    let computerNumber = Math.random();
+    let computerChoice;
+    $("#userChoice").text(input)
+    if ( computerNumber > 0.66666)
+    {
+        $("#computerChoice").text("rock");
+        computerChoice = "rock";
+    }
+    else if ( computerNumber > 0.33333)
+    {
+        $("#computerChoice").text("scissor");
+        computerChoice = "scissor";
+    }
+    else
+    {
+        $("#computerChoice").text("paper");
+        computerChoice = "papar";
+    }
+    if ((input === computerChoice) {
+        $("#result").text("It's a tie");
+    }
+    if ((input === "scissor")&&(computerChoice === "paper" )||(input === "paper")&&(computerChoice === "rock")||(input === "rock")&&(computerChoice === "scissor"))
+        alert("hi");
+    }
+
+
 
 });
 
